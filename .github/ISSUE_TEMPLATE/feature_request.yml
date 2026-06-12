@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a task, preset, or capability
+labels: [enhancement]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What do you want to do to your files?
+      description: Describe the job in plain words — exactly like you would in FFmix's AI box. ("Compress 4K screen recordings to under 100MB keeping text readable")
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: If you already do this with ffmpeg, paste your command
+      render: shell
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Where does this belong?
+      options:
+        - A new task / drawer in the app
+        - A built-in preset
+        - A recipe for docs/ffmpeg-recipes.md
+        - Not sure

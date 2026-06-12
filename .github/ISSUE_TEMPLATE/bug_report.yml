@@ -1,0 +1,29 @@
+name: Bug report (FFmix app)
+description: Something broke in the FFmix app
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: FFmix version & macOS version
+      placeholder: "FFmix 1.0 (123) · macOS 15.5 · M2"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: The command (from the task's command layer / "View log")
+      description: FFmix shows the exact command for every job — paste it here, plus the raw log tail for failed jobs. This is usually all we need.
+      render: shell
+  - type: input
+    id: engine
+    attributes:
+      label: Engine
+      placeholder: "embedded LGPL build / Homebrew ffmpeg 8.0 / custom path"
